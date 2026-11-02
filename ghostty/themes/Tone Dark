@@ -1,0 +1,26 @@
+# Tone Dark — muted gray base with desaturated, tone-matched accents.
+# Generated from color-palette.json ("Tone palette", dark mode).
+
+background = #0b0b0c
+foreground = #edeeef
+cursor-color = #edeeef
+cursor-text = #0b0b0c
+selection-background = #2e3134
+selection-foreground = #edeeef
+
+palette = 0=#2e3134
+palette = 1=#e9434b
+palette = 2=#829750
+palette = 3=#c7693c
+palette = 4=#3d85f3
+palette = 5=#9560fd
+palette = 6=#599b94
+palette = 7=#98a0a5
+palette = 8=#6b6f74
+palette = 9=#e9434b
+palette = 10=#829750
+palette = 11=#ad8f4e
+palette = 12=#3d85f3
+palette = 13=#e34284
+palette = 14=#599b94
+palette = 15=#edeeef

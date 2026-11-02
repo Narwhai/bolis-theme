@@ -1,0 +1,26 @@
+# Tone Light — muted gray base with desaturated, tone-matched accents.
+# Generated from color-palette.json ("Tone palette", light mode).
+
+background = #edeeef
+foreground = #0b0b0c
+cursor-color = #0b0b0c
+cursor-text = #edeeef
+selection-background = #c0c4c9
+selection-foreground = #0b0b0c
+
+palette = 0=#4b5257
+palette = 1=#c4182d
+palette = 2=#576a23
+palette = 3=#a34918
+palette = 4=#155fca
+palette = 5=#8000fa
+palette = 6=#2a6e67
+palette = 7=#6d7279
+palette = 8=#7c8085
+palette = 9=#c4182d
+palette = 10=#576a23
+palette = 11=#73570c
+palette = 12=#155fca
+palette = 13=#bf1567
+palette = 14=#2a6e67
+palette = 15=#0b0b0c
