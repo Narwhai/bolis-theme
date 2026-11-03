@@ -97,7 +97,86 @@ for _, mode in ipairs({ "light", "dark" }) do
 end
 ok("ghostty themes match the palette and ANSI mapping")
 
--- 3. All three colorscheme entry points load without errors.
+-- 3. Noctalia palette must match the same roles and ANSI mapping.
+local noctalia_text = vim.fn.readfile(root .. "/noctalia/Tone.json")
+local noctalia = vim.json.decode(table.concat(noctalia_text, "\n"))
+
+for _, mode in ipairs({ "light", "dark" }) do
+  local c = palette[mode]
+  local theme = noctalia[mode] or {}
+  local terminal = theme.terminal or {}
+  local normal = terminal.normal or {}
+  local bright = terminal.bright or {}
+
+  local expected = {
+    mPrimary = c.blue,
+    mOnPrimary = c.bg,
+    mSecondary = c.purple,
+    mOnSecondary = c.bg,
+    mTertiary = c.cyan,
+    mOnTertiary = c.bg,
+    mError = c.red,
+    mOnError = c.bg,
+    mSurface = c.bg,
+    mOnSurface = c.tx,
+    mSurfaceVariant = c.bg2,
+    mOnSurfaceVariant = c.tx2,
+    mOutline = c.ui,
+    mShadow = mode == "dark" and c.bg or c.ui,
+    mHover = c.ui3,
+    mOnHover = c.tx,
+  }
+  for key, want in pairs(expected) do
+    local got = theme[key]
+    if got == nil or string.lower(got) ~= string.lower(want) then
+      fail(("noctalia %s: %s = %s, want %s"):format(mode, key, tostring(got), want))
+    end
+  end
+
+  local ansi_keys = { "black", "red", "green", "yellow", "blue", "magenta", "cyan", "white" }
+  for i, key in ipairs(ansi_keys) do
+    local got_normal = normal[key]
+    local got_bright = bright[key]
+    if got_normal == nil or string.lower(got_normal) ~= string.lower(palette.ansi[mode][i]) then
+      fail(
+        ("noctalia %s: terminal.normal.%s = %s, want %s"):format(
+          mode,
+          key,
+          tostring(got_normal),
+          palette.ansi[mode][i]
+        )
+      )
+    end
+    if got_bright == nil or string.lower(got_bright) ~= string.lower(palette.ansi[mode][i + 8]) then
+      fail(
+        ("noctalia %s: terminal.bright.%s = %s, want %s"):format(
+          mode,
+          key,
+          tostring(got_bright),
+          palette.ansi[mode][i + 8]
+        )
+      )
+    end
+  end
+
+  local terminal_expected = {
+    foreground = c.tx,
+    background = c.bg,
+    selectionFg = c.tx,
+    selectionBg = c.ui,
+    cursor = c.tx,
+    cursorText = c.bg,
+  }
+  for key, want in pairs(terminal_expected) do
+    local got = terminal[key]
+    if got == nil or string.lower(got) ~= string.lower(want) then
+      fail(("noctalia %s: terminal.%s = %s, want %s"):format(mode, key, tostring(got), want))
+    end
+  end
+end
+ok("noctalia palette matches the palette and ANSI mapping")
+
+-- 4. All three colorscheme entry points load without errors.
 for _, scheme in ipairs({ "tone-dark", "tone-light", "tone" }) do
   local entry = root .. "/colors/" .. scheme .. ".lua"
   local chunk, err = loadfile(entry)
@@ -112,7 +191,7 @@ for _, scheme in ipairs({ "tone-dark", "tone-light", "tone" }) do
 end
 ok("colors/tone.lua, tone-light.lua, tone-dark.lua load without errors")
 
--- 4. Sample highlight groups are applied with the right colors.
+-- 5. Sample highlight groups are applied with the right colors.
 local tone = require("tone")
 
 tone.load("dark")
