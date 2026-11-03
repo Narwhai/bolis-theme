@@ -1,12 +1,12 @@
-# Tone
+# Bolis
 
 A gray color scheme with muted, tone-matched accents for **Neovim**,
 **Ghostty**, and **Noctalia**, in light and dark variants. All variants are
-derived from [`color-palette.json`](color-palette.json) (the "Tone palette"),
+derived from [`color-palette.json`](color-palette.json) (the "Bolis palette"),
 which is the source of truth — edit the palette there and update
-[`lua/tone/palette.lua`](lua/tone/palette.lua), the
+[`lua/bolis/palette.lua`](lua/bolis/palette.lua), the
 [`ghostty/themes/`](ghostty/themes/) files, and
-[`noctalia/Tone.json`](noctalia/Tone.json) to match (run the verifier below to
+[`noctalia/Bolis.json`](noctalia/Bolis.json) to match (run the verifier below to
 check they are in sync).
 
 ## Palette roles
@@ -33,9 +33,9 @@ strings → green, builtins/references → cyan.
 Requires Neovim ≥ 0.9 and `termguicolors` enabled.
 
 ```
-:colorscheme tone         " follows 'background'
-:colorscheme tone-light
-:colorscheme tone-dark
+:colorscheme bolis         " follows 'background'
+:colorscheme bolis-light
+:colorscheme bolis-dark
 ```
 
 Install with [lazy.nvim](https://lazy.folke.io) (this repository is a valid
@@ -49,11 +49,11 @@ plugin):
 },
 ```
 
-then `vim.cmd.colorscheme("tone")` in your config. Optional highlight
+then `vim.cmd.colorscheme("bolis")` in your config. Optional highlight
 overrides:
 
 ```lua
-require("tone").setup({
+require("bolis").setup({
   overrides = {
     Normal = { bg = "NONE" }, -- transparent background
   },
@@ -79,9 +79,9 @@ cp ghostty/themes/* ~/.config/ghostty/themes/
 Then pick one in `~/.config/ghostty/config`:
 
 ```
-theme = Tone Dark
+theme = Bolis Dark
 # or follow the desktop light/dark preference:
-theme = light:Tone Light,dark:Tone Dark
+theme = light:Bolis Light,dark:Bolis Dark
 ```
 
 The ANSI palette 0–15, cursor, and selection colors are identical to the
@@ -95,13 +95,13 @@ Copy or symlink the palette into Noctalia's custom palettes directory:
 
 ```sh
 mkdir -p ~/.config/noctalia/palettes
-ln -sf "$PWD/noctalia/Tone.json" ~/.config/noctalia/palettes/Tone.json
+ln -sf "$PWD/noctalia/Bolis.json" ~/.config/noctalia/palettes/Bolis.json
 ```
 
-Then pick **Tone** under Settings → Colors, or select it from the CLI:
+Then pick **Bolis** under Settings → Colors, or select it from the CLI:
 
 ```sh
-noctalia msg color-scheme-set custom Tone
+noctalia msg color-scheme-set custom Bolis
 ```
 
 The dark and light variants follow Noctalia's theme mode. Its terminal colors
@@ -119,10 +119,10 @@ nvim --headless --clean -l scripts/verify.lua
 ## Layout
 
 ```
-color-palette.json         source of truth (Tone palette, OKHSL)
-colors/tone*.lua           colorscheme entry points
-lua/tone/                  palette, highlights, loader
+color-palette.json         source of truth (Bolis palette, OKHSL)
+colors/bolis*.lua           colorscheme entry points
+lua/bolis/                  palette, highlights, loader
 ghostty/themes/            Ghostty theme files
-noctalia/Tone.json         Noctalia custom palette
+noctalia/Bolis.json         Noctalia custom palette
 scripts/verify.lua         sync + smoke-test verifier
 ```

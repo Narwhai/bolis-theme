@@ -1,4 +1,4 @@
--- Highlight definitions for the Tone color scheme.
+-- Highlight definitions for the Bolis color scheme.
 --
 -- A spec is either a table (nvim_set_hl definition) or a string (link).
 -- Colors are referenced by palette role:
@@ -25,7 +25,7 @@ function M.get(c, blend)
   local function h(defs)
     for name, spec in pairs(defs) do
       if groups[name] ~= nil then
-        error("tone: duplicate highlight definition: " .. name)
+        error("bolis: duplicate highlight definition: " .. name)
       end
       groups[name] = spec
     end

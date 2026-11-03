@@ -27,10 +27,10 @@ local function expected_rgb(hex)
   return r * 65536 + g * 256 + b
 end
 
--- 1. lua/tone/palette.lua must match color-palette.json exactly.
+-- 1. lua/bolis/palette.lua must match color-palette.json exactly.
 local json_text = vim.fn.readfile(root .. "/color-palette.json")
 local data = vim.json.decode(table.concat(json_text, "\n"))
-local palette = dofile(root .. "/lua/tone/palette.lua")
+local palette = dofile(root .. "/lua/bolis/palette.lua")
 
 local key_map = {
   ["bg"] = "bg",
@@ -60,11 +60,11 @@ for _, mode in ipairs({ "light", "dark" }) do
     end
   end
 end
-ok("lua/tone/palette.lua matches color-palette.json")
+ok("lua/bolis/palette.lua matches color-palette.json")
 
 -- 2. Ghostty themes must match the ANSI mapping and base colors.
 for _, mode in ipairs({ "light", "dark" }) do
-  local theme = vim.fn.readfile(root .. "/ghostty/themes/Tone " .. mode:gsub("^%l", string.upper))
+  local theme = vim.fn.readfile(root .. "/ghostty/themes/Bolis " .. mode:gsub("^%l", string.upper))
   local values = {}
   for _, line in ipairs(theme) do
     local key, value = line:match("^(%S+)%s*=%s*(#%x%x%x%x%x%x)$")
@@ -98,7 +98,7 @@ end
 ok("ghostty themes match the palette and ANSI mapping")
 
 -- 3. Noctalia palette must match the same roles and ANSI mapping.
-local noctalia_text = vim.fn.readfile(root .. "/noctalia/Tone.json")
+local noctalia_text = vim.fn.readfile(root .. "/noctalia/Bolis.json")
 local noctalia = vim.json.decode(table.concat(noctalia_text, "\n"))
 
 for _, mode in ipairs({ "light", "dark" }) do
@@ -177,7 +177,7 @@ end
 ok("noctalia palette matches the palette and ANSI mapping")
 
 -- 4. All three colorscheme entry points load without errors.
-for _, scheme in ipairs({ "tone-dark", "tone-light", "tone" }) do
+for _, scheme in ipairs({ "bolis-dark", "bolis-light", "bolis" }) do
   local entry = root .. "/colors/" .. scheme .. ".lua"
   local chunk, err = loadfile(entry)
   if chunk == nil then
@@ -189,12 +189,12 @@ for _, scheme in ipairs({ "tone-dark", "tone-light", "tone" }) do
     end
   end
 end
-ok("colors/tone.lua, tone-light.lua, tone-dark.lua load without errors")
+ok("colors/bolis.lua, bolis-light.lua, bolis-dark.lua load without errors")
 
 -- 5. Sample highlight groups are applied with the right colors.
-local tone = require("tone")
+local bolis = require("bolis")
 
-tone.load("dark")
+bolis.load("dark")
 local checks = {
   { group = "Normal", key = "fg", hex = palette.dark.tx },
   { group = "Normal", key = "bg", hex = palette.dark.bg },
@@ -221,7 +221,7 @@ if vim.g.terminal_color_0 ~= palette.ansi.dark[1] then
 end
 ok("dark variant highlights are applied")
 
-tone.load("light")
+bolis.load("light")
 local normal = vim.api.nvim_get_hl(0, { name = "Normal" })
 if normal.bg ~= expected_rgb(palette.light.bg) or normal.fg ~= expected_rgb(palette.light.tx) then
   fail("light Normal is not tx on bg")

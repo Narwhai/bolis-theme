@@ -1,15 +1,15 @@
--- Tone color scheme for Neovim (>= 0.9).
+-- Bolis color scheme for Neovim (>= 0.9).
 --
--- Variants "light" and "dark", generated from the "Tone palette"
+-- Variants "light" and "dark", generated from the "Bolis palette"
 -- (color-palette.json in the repository root).
 --
 -- Usage:
---   :colorscheme tone        follows 'background'
---   :colorscheme tone-light
---   :colorscheme tone-dark
+--   :colorscheme bolis        follows 'background'
+--   :colorscheme bolis-light
+--   :colorscheme bolis-dark
 --
 -- Optional highlight overrides, applied after the scheme is loaded:
---   require("tone").setup({
+--   require("bolis").setup({
 --     overrides = {
 --       Normal = { bg = "NONE" },
 --       Comment = { fg = "#6b6f74" },
@@ -17,8 +17,8 @@
 --   })
 local M = {}
 
-local palette = require("tone.palette")
-local highlights = require("tone.highlights")
+local palette = require("bolis.palette")
+local highlights = require("bolis.highlights")
 
 M.palette = palette
 
@@ -26,7 +26,7 @@ local overrides = {}
 
 local function parse_hex(hex)
   if type(hex) ~= "string" or not hex:match("^#%x%x%x%x%x%x$") then
-    error("tone: invalid hex color: " .. tostring(hex))
+    error("bolis: invalid hex color: " .. tostring(hex))
   end
   local r = tonumber(hex:sub(2, 3), 16)
   local g = tonumber(hex:sub(4, 5), 16)
@@ -62,11 +62,11 @@ end
 ---@param opts table? { overrides = table<string, table|string> }
 function M.setup(opts)
   if opts ~= nil and type(opts) ~= "table" then
-    error("tone: setup() expects a table, got " .. type(opts))
+    error("bolis: setup() expects a table, got " .. type(opts))
   end
   opts = opts or {}
   if opts.overrides ~= nil and type(opts.overrides) ~= "table" then
-    error("tone: overrides must be a table, got " .. type(opts.overrides))
+    error("bolis: overrides must be a table, got " .. type(opts.overrides))
   end
   overrides = opts.overrides or {}
 end
@@ -78,7 +78,7 @@ function M.load(variant)
     variant = vim.o.background == "light" and "light" or "dark"
   end
   if variant ~= "light" and variant ~= "dark" then
-    error('tone: unknown variant (expected "light" or "dark"): ' .. tostring(variant))
+    error('bolis: unknown variant (expected "light" or "dark"): ' .. tostring(variant))
   end
 
   if vim.o.background ~= variant then
@@ -108,7 +108,7 @@ function M.load(variant)
     apply(name, spec)
   end
 
-  vim.g.colors_name = "tone"
+  vim.g.colors_name = "bolis"
 end
 
 return M
