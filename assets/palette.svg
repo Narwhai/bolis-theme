@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1056" height="632" viewBox="0 0 1056 632">
+<style>
+  text { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+  .title { font-size: 15px; font-weight: 600; }
+  .role { font-size: 12px; }
+  .hex { font-size: 11px; }
+</style>
+<rect x="32" y="32" width="992" height="272" rx="8" fill="#edeeef" stroke="#c0c4c9" stroke-width="1"/>
+<text class="title" x="52" y="63" fill="#0b0b0c">Bolis Light</text>
+<rect x="52" y="82" width="112" height="64" rx="5" fill="#edeeef" stroke="#c0c4c9" stroke-width="1"/>
+<text class="role" x="54" y="162" fill="#0b0b0c">bg</text>
+<text class="hex" x="54" y="178" fill="#7c8085">#edeeef</text>
+<rect x="172" y="82" width="112" height="64" rx="5" fill="#dee0e2" stroke="#c0c4c9" stroke-width="1"/>
+<text class="role" x="174" y="162" fill="#0b0b0c">bg2</text>
+<text class="hex" x="174" y="178" fill="#7c8085">#dee0e2</text>
+<rect x="292" y="82" width="112" height="64" rx="5" fill="#c0c4c9" stroke="#c0c4c9" stroke-width="1"/>
+<text class="role" x="294" y="162" fill="#0b0b0c">ui</text>
+<text class="hex" x="294" y="178" fill="#7c8085">#c0c4c9</text>
+<rect x="412" y="82" width="112" height="64" rx="5" fill="#6d7279" stroke="#c0c4c9" stroke-width="1"/>
+<text class="role" x="414" y="162" fill="#0b0b0c">ui2</text>
+<text class="hex" x="414" y="178" fill="#7c8085">#6d7279</text>
+<rect x="532" y="82" width="112" height="64" rx="5" fill="#7696be" stroke="#c0c4c9" stroke-width="1"/>
+<text class="role" x="534" y="162" fill="#0b0b0c">ui3</text>
+<text class="hex" x="534" y="178" fill="#7c8085">#7696be</text>
+<rect x="652" y="82" width="112" height="64" rx="5" fill="#0b0b0c" stroke="#c0c4c9" stroke-width="1"/>
+<text class="role" x="654" y="162" fill="#0b0b0c">tx</text>
+<text class="hex" x="654" y="178" fill="#7c8085">#0b0b0c</text>
+<rect x="772" y="82" width="112" height="64" rx="5" fill="#4b5257" stroke="#c0c4c9" stroke-width="1"/>
+<text class="role" x="774" y="162" fill="#0b0b0c">tx2</text>
+<text class="hex" x="774" y="178" fill="#7c8085">#4b5257</text>
+<rect x="892" y="82" width="112" height="64" rx="5" fill="#7c8085" stroke="#c0c4c9" stroke-width="1"/>
+<text class="role" x="894" y="162" fill="#0b0b0c">tx3</text>
+<text class="hex" x="894" y="178" fill="#7c8085">#7c8085</text>
+<rect x="52" y="202" width="112" height="64" rx="5" fill="#c4182d" stroke="#c0c4c9" stroke-width="1"/>
+<text class="role" x="54" y="282" fill="#0b0b0c">red</text>
+<text class="hex" x="54" y="298" fill="#7c8085">#c4182d</text>
+<rect x="172" y="202" width="112" height="64" rx="5" fill="#a34918" stroke="#c0c4c9" stroke-width="1"/>
+<text class="role" x="174" y="282" fill="#0b0b0c">orange</text>
+<text class="hex" x="174" y="298" fill="#7c8085">#a34918</text>
+<rect x="292" y="202" width="112" height="64" rx="5" fill="#73570c" stroke="#c0c4c9" stroke-width="1"/>
+<text class="role" x="294" y="282" fill="#0b0b0c">yellow</text>
+<text class="hex" x="294" y="298" fill="#7c8085">#73570c</text>
+<rect x="412" y="202" width="112" height="64" rx="5" fill="#576a23" stroke="#c0c4c9" stroke-width="1"/>
+<text class="role" x="414" y="282" fill="#0b0b0c">green</text>
+<text class="hex" x="414" y="298" fill="#7c8085">#576a23</text>
+<rect x="532" y="202" width="112" height="64" rx="5" fill="#2a6e67" stroke="#c0c4c9" stroke-width="1"/>
+<text class="role" x="534" y="282" fill="#0b0b0c">cyan</text>
+<text class="hex" x="534" y="298" fill="#7c8085">#2a6e67</text>
+<rect x="652" y="202" width="112" height="64" rx="5" fill="#155fca" stroke="#c0c4c9" stroke-width="1"/>
+<text class="role" x="654" y="282" fill="#0b0b0c">blue</text>
+<text class="hex" x="654" y="298" fill="#7c8085">#155fca</text>
+<rect x="772" y="202" width="112" height="64" rx="5" fill="#8000fa" stroke="#c0c4c9" stroke-width="1"/>
+<text class="role" x="774" y="282" fill="#0b0b0c">purple</text>
+<text class="hex" x="774" y="298" fill="#7c8085">#8000fa</text>
+<rect x="892" y="202" width="112" height="64" rx="5" fill="#bf1567" stroke="#c0c4c9" stroke-width="1"/>
+<text class="role" x="894" y="282" fill="#0b0b0c">magenta</text>
+<text class="hex" x="894" y="298" fill="#7c8085">#bf1567</text>
+<rect x="32" y="328" width="992" height="272" rx="8" fill="#0b0b0c" stroke="#2e3134" stroke-width="1"/>
+<text class="title" x="52" y="359" fill="#edeeef">Bolis Dark</text>
+<rect x="52" y="378" width="112" height="64" rx="5" fill="#0b0b0c" stroke="#2e3134" stroke-width="1"/>
+<text class="role" x="54" y="458" fill="#edeeef">bg</text>
+<text class="hex" x="54" y="474" fill="#6b6f74">#0b0b0c</text>
+<rect x="172" y="378" width="112" height="64" rx="5" fill="#18191a" stroke="#2e3134" stroke-width="1"/>
+<text class="role" x="174" y="458" fill="#edeeef">bg2</text>
+<text class="hex" x="174" y="474" fill="#6b6f74">#18191a</text>
+<rect x="292" y="378" width="112" height="64" rx="5" fill="#2e3134" stroke="#2e3134" stroke-width="1"/>
+<text class="role" x="294" y="458" fill="#edeeef">ui</text>
+<text class="hex" x="294" y="474" fill="#6b6f74">#2e3134</text>
+<rect x="412" y="378" width="112" height="64" rx="5" fill="#777d83" stroke="#2e3134" stroke-width="1"/>
+<text class="role" x="414" y="458" fill="#edeeef">ui2</text>
+<text class="hex" x="414" y="474" fill="#6b6f74">#777d83</text>
+<rect x="532" y="378" width="112" height="64" rx="5" fill="#425d7e" stroke="#2e3134" stroke-width="1"/>
+<text class="role" x="534" y="458" fill="#edeeef">ui3</text>
+<text class="hex" x="534" y="474" fill="#6b6f74">#425d7e</text>
+<rect x="652" y="378" width="112" height="64" rx="5" fill="#edeeef" stroke="#2e3134" stroke-width="1"/>
+<text class="role" x="654" y="458" fill="#edeeef">tx</text>
+<text class="hex" x="654" y="474" fill="#6b6f74">#edeeef</text>
+<rect x="772" y="378" width="112" height="64" rx="5" fill="#98a0a5" stroke="#2e3134" stroke-width="1"/>
+<text class="role" x="774" y="458" fill="#edeeef">tx2</text>
+<text class="hex" x="774" y="474" fill="#6b6f74">#98a0a5</text>
+<rect x="892" y="378" width="112" height="64" rx="5" fill="#6b6f74" stroke="#2e3134" stroke-width="1"/>
+<text class="role" x="894" y="458" fill="#edeeef">tx3</text>
+<text class="hex" x="894" y="474" fill="#6b6f74">#6b6f74</text>
+<rect x="52" y="498" width="112" height="64" rx="5" fill="#e9434b" stroke="#2e3134" stroke-width="1"/>
+<text class="role" x="54" y="578" fill="#edeeef">red</text>
+<text class="hex" x="54" y="594" fill="#6b6f74">#e9434b</text>
+<rect x="172" y="498" width="112" height="64" rx="5" fill="#c7693c" stroke="#2e3134" stroke-width="1"/>
+<text class="role" x="174" y="578" fill="#edeeef">orange</text>
+<text class="hex" x="174" y="594" fill="#6b6f74">#c7693c</text>
+<rect x="292" y="498" width="112" height="64" rx="5" fill="#ad8f4e" stroke="#2e3134" stroke-width="1"/>
+<text class="role" x="294" y="578" fill="#edeeef">yellow</text>
+<text class="hex" x="294" y="594" fill="#6b6f74">#ad8f4e</text>
+<rect x="412" y="498" width="112" height="64" rx="5" fill="#829750" stroke="#2e3134" stroke-width="1"/>
+<text class="role" x="414" y="578" fill="#edeeef">green</text>
+<text class="hex" x="414" y="594" fill="#6b6f74">#829750</text>
+<rect x="532" y="498" width="112" height="64" rx="5" fill="#599b94" stroke="#2e3134" stroke-width="1"/>
+<text class="role" x="534" y="578" fill="#edeeef">cyan</text>
+<text class="hex" x="534" y="594" fill="#6b6f74">#599b94</text>
+<rect x="652" y="498" width="112" height="64" rx="5" fill="#3d85f3" stroke="#2e3134" stroke-width="1"/>
+<text class="role" x="654" y="578" fill="#edeeef">blue</text>
+<text class="hex" x="654" y="594" fill="#6b6f74">#3d85f3</text>
+<rect x="772" y="498" width="112" height="64" rx="5" fill="#9560fd" stroke="#2e3134" stroke-width="1"/>
+<text class="role" x="774" y="578" fill="#edeeef">purple</text>
+<text class="hex" x="774" y="594" fill="#6b6f74">#9560fd</text>
+<rect x="892" y="498" width="112" height="64" rx="5" fill="#e34284" stroke="#2e3134" stroke-width="1"/>
+<text class="role" x="894" y="578" fill="#edeeef">magenta</text>
+<text class="hex" x="894" y="594" fill="#6b6f74">#e34284</text>
+</svg>

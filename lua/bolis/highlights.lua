@@ -12,7 +12,7 @@
 -- Semantic conventions:
 --   keywords -> magenta, preprocessor/import -> purple, functions -> blue,
 --   types -> yellow, constants/numbers -> orange, strings -> green,
---   escapes/interpolation -> orange, builtins/references -> cyan,
+--   escapes/interpolation -> orange, builtin variables/symbols -> cyan,
 --   red is reserved for errors and deletions.
 local M = {}
 
@@ -667,6 +667,9 @@ function M.get(c, blend)
   -- indent-blankline / mini.indentscope
   ----------------------------------------------------------------------------
   h {
+    IblIndent = { fg = c.ui },
+    IblWhitespace = { fg = c.ui },
+    IblScope = { fg = c.ui3 },
     IndentBlanklineChar = { fg = c.ui },
     IndentBlanklineContextChar = { fg = c.ui3 },
     IndentBlanklineSpaceChar = { fg = c.ui },

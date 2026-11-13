@@ -8,7 +8,7 @@
 --   :colorscheme bolis-light
 --   :colorscheme bolis-dark
 --
--- Optional highlight overrides, applied after the scheme is loaded:
+-- Optional highlight overrides; call setup() before loading the scheme:
 --   require("bolis").setup({
 --     overrides = {
 --       Normal = { bg = "NONE" },
