@@ -4,7 +4,7 @@ A cool toned gray theme with punchy colors. Themes have currentl been built for
 **Neovim**, **Ghostty**, and **Noctalia**, in light and dark variants. 
 
 The [`color-palette.json`](color-palette.json) is the source of truth, and was 
-created using my [Paleta Theme Generator](https://github.com/Narwhai/paleta-theme-generator) 
+created using my [Paleta Palette Studio](https://github.com/Narwhai/paleta-palette-studio) 
 to generate a palette in OKHSL space. The colors are then used to generate the 
 Neovim, Ghostty, and Noctalia themes.
 
